@@ -87,30 +87,16 @@ the full-route test never teleports the Payload.
 
 ### 1. Success conditions and a possible cheat
 
-In your own words, what must be true (physically and in script state) for a run to
-count as success? Name one way a player could try to cheat your maze, and whether
-your design blocks it.
-
-**[Your own answer goes here.]**
+The Actor must activate the sensor to remove the roadblock, then push the Payload into the DepositZone. The scripts check the Payload’s tag and Rigidbody, the unlocked state, and whether success has already occurred. Depositing early cannot bypass the sensor because the Payload must enter again after unlocking.
 
 ### 2. An unexpected behavior
 
-Describe one unexpected behavior you hit while building (control feel, collisions,
-unlock timing, deposit, etc.). What caused it, and what did you change?
-
-**[Your own answer goes here.]**
+The Payload initially moved after a collision but stopped during continuous pushing. The exact cause was not isolated, but the behavior involved the balance between applied force, friction, and damping. The final setup uses lower contact friction and different damping values, and continuous-pushing tests passed.
 
 ### 3. A design decision and tradeoff
 
-Pick one design decision (force strength, mass/damping, sensor size/placement,
-door vs visual-only unlock, one script vs many). What did you optimize for, and
-what did you give up?
-
-**[Your own answer goes here.]**
+The Actor uses linear damping of 4, while the Payload uses 0.5. This favors precise Actor positioning while allowing the Payload to retain momentum. The tradeoff is that the Payload can continue sliding when the player wants it to stop.
 
 ### 4. The weakest part
 
-What is the weakest part of your system right now (feel, clarity, fairness, code
-structure, or robustness)? What would you change first, and why?
-
-**[Your own answer goes here.]**
+A weakness is that the Payload can become trapped against a wall because the Actor can only push it. Restarting solves this but removes all progress from the run. A short-range pulling mechanic would help players recover from positioning mistakes.

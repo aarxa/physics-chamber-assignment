@@ -1,0 +1,33 @@
+# Unity-generated data
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Editors and OS files
+.DS_Store
+.idea/
+.vs/
+.vscode/
+*.csproj
+*.sln
+*.slnx
+*.user
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+sysinfo.txt
+*.log
+
+# Locally preserved unrelated unsaved editor scene
+/Assets/RecoveredOpenScene.unity
+/Assets/RecoveredOpenScene.unity.meta

@@ -1,0 +1,4 @@
+trial,payload_mass_kg,actor_mass_kg,actor_linear_damping,payload_linear_damping,force_N,duration_simulated_s,payload_distance_m,final_payload_speed_m_per_s,second_half_distance_m
+mass_0.5, 0.5,1,4,0.5,20,2,5.8832,3.5340,3.4850
+mass_1, 1,1,4,0.5,20,2,4.8671,3.0580,2.9722
+mass_3, 3,1,4,0.5,20,2,2.2810,1.5807,1.4678

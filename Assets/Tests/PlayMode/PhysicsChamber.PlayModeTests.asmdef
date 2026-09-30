@@ -1,0 +1,6 @@
+{
+  "name": "PhysicsChamber.PlayModeTests",
+  "references": ["PhysicsChamber.Runtime", "Unity.InputSystem"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "autoReferenced": false
+}
